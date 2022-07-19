@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 4 jun. 2021, 21:25:45
+    Author     : Diego Pinzon
+*/
+.buttons{
+    -fx-background-color:  #252850;
+}
+
+.buttons:hover{
+    -fx-background-color: #171932;
+    -fx-font-size: 15px;
+    -fx-font-family: "Consolas";
+}

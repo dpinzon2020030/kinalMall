@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="1200.0" stylesheets="@../resource/css/EstiloCrud.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegopinzon.controller.ClientesController">
+   <children>
+      <AnchorPane prefHeight="563.0" prefWidth="224.0" style="-fx-background-color: #626567;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox layoutX="18.0" layoutY="198.0" prefHeight="166.0" prefWidth="186.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="40.0" prefWidth="185.0" style="-fx-background-color: #626567;" styleClass="buttons" text="Nuevo " textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="ivNuevo" fitHeight="54.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnModificar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#modificar" prefHeight="40.0" prefWidth="185.0" style="-fx-background-color: #626567;" styleClass="buttons" text="Modificar" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="ivModificar" fitHeight="54.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" layoutX="10.0" layoutY="50.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="40.0" prefWidth="185.0" style="-fx-background-color: #626567;" styleClass="buttons" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="ivEliminar" fitHeight="54.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" onAction="#reporte" prefHeight="40.0" prefWidth="185.0" style="-fx-background-color: #626567;" styleClass="buttons" text="Reporte" textFill="WHITE">
+                     <font>
+                        <Font name="Consolas" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="ivReporte" fitHeight="54.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutX="19.0" prefHeight="166.0" prefWidth="185.0" style="-fx-background-color: #7b7d7d; -fx-background-radius: 0 0 30 30;">
+               <children>
+                  <VBox alignment="CENTER" layoutX="21.0" layoutY="6.0" prefHeight="141.0" prefWidth="143.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="140.0" text="Clientes" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="103.0" fitWidth="132.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/clientes.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblClientes" layoutX="244.0" layoutY="306.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="363.0" prefWidth="934.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="45.5999755859375" text="Id" />
+          <TableColumn fx:id="colNombres" prefWidth="79.199951171875" text="Nombres" />
+            <TableColumn fx:id="colApellidos" minWidth="9.0" prefWidth="80.7999267578125" text="Apellidos" />
+            <TableColumn fx:id="colTelefono" minWidth="9.0" prefWidth="151.20004272460938" text="Teléfono" />
+            <TableColumn fx:id="colDireccion" minWidth="9.0" prefWidth="262.39996337890625" text="Direccion" />
+            <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="198.4000244140625" text="Email" />
+            <TableColumn fx:id="colCodigoTipoCliente" minWidth="9.0" prefWidth="116.800048828125" text="Tipo Cliente" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="40.0" fitWidth="42.0" layoutX="1146.0" layoutY="14.0" onMouseClicked="#regresar" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/flecha-izquierda.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="244.0" layoutY="34.0" prefHeight="222.0" prefWidth="842.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="143.9999755859375" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.99998779296874" minWidth="10.0" prefWidth="211.40002441406247" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.20001220703125" minWidth="10.0" prefWidth="80.19996337890626" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.60003662109375" minWidth="10.0" prefWidth="174.2000244140625" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.19997558593752" minWidth="10.0" prefWidth="231.19997558593752" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Id:">
+               <font>
+                  <Font name="Consolas" size="22.0" />
+               </font>
+            </Label>
+            <Label text="Nombres:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Consolas" size="22.0" />
+               </font>
+            </Label>
+            <Label text="Apellidos:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Consolas" size="22.0" />
+               </font>
+            </Label>
+            <Label text="Telefono:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Consolas" size="22.0" />
+               </font>
+            </Label>
+            <Label text="Direccion:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Consolas" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtId" editable="false" prefHeight="25.0" prefWidth="193.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNombres" editable="false" prefHeight="25.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtApellidos" editable="false" prefHeight="25.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtTelefono" editable="false" prefHeight="25.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtDireccion" editable="false" prefHeight="25.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Email:" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Consolas" size="22.0" />
+               </font>
+            </Label>
+            <Label text="Tipo Cliente:" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Consolas" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEmail" editable="false" prefHeight="25.0" prefWidth="193.0" GridPane.columnIndex="4" />
+            <ComboBox fx:id="cmbTipoCliente" prefHeight="25.0" prefWidth="193.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

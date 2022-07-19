@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" stylesheets="@../resource/css/EstiloKinalMall.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosaceituno.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="626.0" fitWidth="1025.0" layoutX="-14.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-126.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../resource/picture/Fondo1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="294.0" fitWidth="300.0" layoutX="340.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="128.0" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="360.0" AnchorPane.topAnchor="78.0">
+         <image>
+            <Image url="@../resource/picture/Logo.png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="-2.0" prefHeight="35.0" prefWidth="176.0">
+        <menus>
+          <Menu mnemonicParsing="false" styleClass="btnModulos" text="Modulos">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaAdministracion" text="Administración" />
+              <MenuItem mnemonicParsing="false" text="Empleados" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaProveedores" text="Proveedores" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaClientes" text="Clientes" />
+                  <MenuItem mnemonicParsing="false" text="Cobros de administración" />
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaHorarios" text="Horarios" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" styleClass="btnAyuda" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#mostrarVistaAutor" text="Autor" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

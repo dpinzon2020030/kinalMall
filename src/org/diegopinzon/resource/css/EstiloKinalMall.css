@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 4 jun. 2021, 21:33:03
+    Author     : Diego Pinzon
+*/
+.menu-bar{
+    -fx-opacity:1; 
+}
+
+.menu-bar:hover{
+    -fx-font-size: 17;
+}
+
+.menu-bar .label{
+    -fx-text-fill: black;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-font-family: "Consolas";
+    
+}
+.menu-bar .menu-buton:hover{
+    -fx-background-color: black;
+}
+.menu-bar .menu-buton .label :hover{
+    -fx-text-fill: white;
+}
+.menu-item .label{
+    -fx-text-fill: black;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-font-family: "Consolas";
+}
+.menu-item {
+    -fx-opacity:1; 
+}

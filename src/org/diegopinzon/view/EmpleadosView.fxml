@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="1200.0" stylesheets="@../resource/css/EstiloKinalMall.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegopinzon.controller.EmpleadosController">
+   <children>
+      <AnchorPane layoutY="-3.0" prefHeight="405.0" prefWidth="236.0" style="-fx-background-color: #626567;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="26.0" prefHeight="169.0" prefWidth="185.0" style="-fx-background-color: #7b7d7d; -fx-background-radius: 0 0 30 30;">
+               <children>
+                  <VBox alignment="CENTER" layoutX="21.0" layoutY="14.0" prefHeight="141.0" prefWidth="143.0" style="-fx-background-color: #7b7d7d;">
+                     <children>
+                        <Label prefHeight="48.0" prefWidth="103.0" text="Empleados" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Consolas" size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="100.0" fitWidth="97.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/empleados.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <VBox layoutX="26.0" layoutY="222.0" prefHeight="159.0" prefWidth="185.0" stylesheets="@../resource/css/EstiloKinalMall.css">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#agregarEmpleados" prefHeight="40.0" prefWidth="185.0" style="-fx-background-color: #626567;" styleClass="buttons" stylesheets="@../resource/css/EstiloCRUD.css" text="Nuevo " textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="ivNuevo" fitHeight="54.0" fitWidth="54.0" layoutX="35.0" layoutY="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/agregar.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#modificar" prefHeight="40.0" prefWidth="185.0" style="-fx-background-color: #626567;" styleClass="buttons" stylesheets="@../resource/css/EstiloCRUD.css" text="Modificar" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="ivModificar" fitHeight="54.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="40.0" prefWidth="185.0" style="-fx-background-color: #626567;" styleClass="buttons" stylesheets="@../resource/css/EstiloCRUD.css" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="ivEliminar" fitHeight="54.0" fitWidth="54.0" layoutX="35.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" mnemonicParsing="false" prefHeight="40.0" prefWidth="185.0" style="-fx-background-color: #626567;" styleClass="buttons" stylesheets="@../resource/css/EstiloCRUD.css" text="Reporte" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="54.0" fitWidth="54.0" layoutX="35.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="40.0" fitWidth="42.0" layoutX="1130.0" layoutY="14.0" onMouseClicked="#regresarEmpleados" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/flecha-izquierda.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="260.0" layoutY="14.0" prefHeight="187.0" prefWidth="845.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="207.80001220703124" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="187.80002441406248" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="0.0" prefWidth="46.19997558593752" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="171.80002441406248" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.0" minWidth="10.0" prefWidth="213.39997558593745" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="59.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="56.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="ID:">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Label>
+            <Label text="Nombre:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Label>
+            <Label text="Apellidos:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Label>
+            <Label text="Email:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtId" prefHeight="25.0" prefWidth="181.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNombre" editable="false" prefHeight="25.0" prefWidth="123.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Sueldo:" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Label>
+            <Label text="Departamento:" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Label>
+            <Label text="Cargo:" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbDepartamento" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cmbCargo" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextField fx:id="txtSueldo" editable="false" prefHeight="25.0" prefWidth="123.0" GridPane.columnIndex="4" />
+            <TextField fx:id="txtApellidos" editable="false" prefHeight="25.0" prefWidth="123.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtEmail" editable="false" prefHeight="25.0" prefWidth="123.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Fecha Contratacion:" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Label>
+            <Label text="Horario:" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Label>
+            <Label text="Administracion:" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbAdministracion" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <ComboBox fx:id="cmbHorarios" prefWidth="150.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <TextField fx:id="txtFechaContratacion" editable="false" prefHeight="25.0" prefWidth="123.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Telefono:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Consolas" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTelefono" editable="false" prefHeight="25.0" prefWidth="123.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblEmpleados" layoutX="258.0" layoutY="232.0" prefHeight="430.0" prefWidth="918.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="47.0" text="ID" />
+          <TableColumn fx:id="colNombre" prefWidth="85.0" text="Nombres" />
+            <TableColumn fx:id="colApellido" prefWidth="90.0" text="Apellidos" />
+            <TableColumn fx:id="colEmail" prefWidth="107.0" text="Email" />
+            <TableColumn fx:id="colTelefono" prefWidth="98.0" text="Telefono" />
+            <TableColumn fx:id="colContratacion" prefWidth="102.0" text="Contratacion" />
+            <TableColumn fx:id="colSueldo" prefWidth="79.0" text="Sueldo" />
+            <TableColumn fx:id="colDepartamentos" prefWidth="92.79998779296875" text="Departamentos" />
+            <TableColumn fx:id="colCargos" minWidth="3.199951171875" prefWidth="49.5999755859375" text="Cargos" />
+            <TableColumn fx:id="colHorarios" minWidth="0.0" prefWidth="61.5999755859375" text="Horarios" />
+            <TableColumn fx:id="colAdministracion" prefWidth="104.7998046875" text="Administracion" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
